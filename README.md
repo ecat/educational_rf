@@ -1,5 +1,6 @@
 1. run download_dependencies.m
 2. Run any of the provided scripts to generate a figure.
+3. You can add new pulses in make_educational_rf_pulses.m
 
 These figures and animations were used in my [ISMRM 2025 educational presentation on RF pulses](https://submissions.mirasmart.com/ISMRM2025/Itinerary/ConferenceMatrixEventDetail.aspx?ses=WE-06). 
 
