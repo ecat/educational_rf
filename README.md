@@ -5,4 +5,7 @@ These figures and animations were used in my [ISMRM 2025 educational presentatio
 
 Feel free to modify or use the pre-generated ones.
 
+![](https://github.com/ecat/educational_rf/blob/master/adiabatic_b1max_0.40.gif)
+![](https://github.com/ecat/educational_rf/blob/master/profile_evolution_6_step_0.gif)
+
 
