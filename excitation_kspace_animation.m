@@ -1,4 +1,5 @@
-excitation_kspace_example_number = 1;
+addPaths();
+excitation_kspace_example_number = 4;
 
 rf_pulse_path = './pulses/';
 
