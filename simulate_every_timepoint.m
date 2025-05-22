@@ -9,7 +9,7 @@ dTs = cell(N_mb_indices, 1);
 max_B1_Gs = cell(N_mb_indices, 1);
 N_timepoints = cell(N_mb_indices, 1);
 
-pulse_option = 61;
+pulse_option = 14;
 line_to_highlight = 'mxy';
 dfs_to_simulate = linspace(-5, 5, 500);
 keypoints = [];
@@ -164,9 +164,9 @@ end
 mb_index_to_plot = 1;
 do_anim = 1;
 do_slice_select = ~(any(pulse_option == [2 3 4 12]));
-do_overlay_signal = do_slice_select && any(pulse_option == [5 6 7 69]);
-do_show_all_m = any(pulse_option == [1 5 6 7 14 15 16 17 69]);
-do_show_signal_title = 1 && any(pulse_option == [1 6 69]);
+do_overlay_signal = do_slice_select && any(pulse_option == [5 6 7 61]);
+do_show_all_m = any(pulse_option == [1 5 6 7 14 15 16 17 61]);
+do_show_signal_title = 1 && any(pulse_option == [1 6 61]);
 
 G_amplitude = 1; 
 
@@ -199,7 +199,7 @@ if(pulse_option == 2 || pulse_option == 3 || pulse_option == 4)
     timepoints_to_animate = 1:1:N_total_points;
 elseif(pulse_option == 6)
     timepoints_to_animate = 1:10:N_total_points;
-elseif(pulse_option == 69)
+elseif(pulse_option == 61)
     timepoints_to_animate = 1:10:N_total_points;
 elseif(pulse_option == 12)
     timepoints_to_animate = 1:10:N_total_points;
@@ -282,7 +282,7 @@ if(do_overlay_signal)
 end
 
 sp3 = subplot(2, 2, 4);
-if(pulse_option == 6 || pulse_option == 69)
+if(pulse_option == 6 || pulse_option == 61)
     axis([0, round(T_total), -1.3 1.3]);
 else
     axis([0, round(T_total), -max(abs(Gs{1})) max(abs(Gs{1}))]);
@@ -291,7 +291,7 @@ plot(ts, zpad_helper(G_to_plot), 'k'); hold on;
 plot_zero_line();
 set(gca, 'Children', flipud(get(gca, 'Children')) )
 h5 = animatedline('MaximumNumPoints', 2, 'Color', 'r', 'LineWidth', 1.5, 'LineStyle', '-');
-if(pulse_option == 6 || pulse_option == 69)
+if(pulse_option == 6 || pulse_option == 61)
     ylim([-1.3, 1.3])
     xlim([0, T_total])
 else
